@@ -9,7 +9,7 @@
       )
         template(v-slot:item.username="{ item }")
           n-link(
-            class="white--text"
+            class="link--text"
             :to="`/users/${item.id}`"
           ) {{ item.username }}
 
@@ -23,11 +23,11 @@ export default {
   },
 
   data: () => ({
-    headers: [
-      { text: 'ID', value: 'id', width: 100 },
-      { text: 'Username', value: 'username' },
-      { text: 'Email', value: 'email' },
-    ],
+      headers: [
+        { text: 'ID', value: 'id', width: 100 },
+        { text: 'Username', value: 'username' },
+        { text: 'Email', value: 'email' },
+      ],
     items: [],
   }),
 

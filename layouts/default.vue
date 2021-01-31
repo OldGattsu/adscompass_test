@@ -5,7 +5,6 @@
     v-main
       nuxt
     Footer
-
 </template>
 
 <script>
@@ -24,9 +23,6 @@ export default {
     drawerLeft: true,
   }),
 
-  created () {
-    this.$vuetify.theme.dark = true
-  },
 }
 </script>
 

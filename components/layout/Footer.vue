@@ -1,8 +1,7 @@
 <template lang="pug">
   v-footer(
     app
-    color="dark"
-    class="white--text"
+    class="link--text"
   )
     span Copyright
     v-spacer

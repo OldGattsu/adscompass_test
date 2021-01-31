@@ -9,7 +9,7 @@
       )
         template(v-slot:item.title="{ item }")
           n-link(
-            class="white--text"
+            class="link--text"
             :to="`/posts/${item.id}`"
           ) {{ item.title }}
 
@@ -19,6 +19,7 @@
 export default {
   async asyncData({ $axios }) {
     const items = await $axios.$get('https://jsonplaceholder.typicode.com/posts')
+    console.log(items)
     return { items }
   },
 

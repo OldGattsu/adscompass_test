@@ -1,6 +1,6 @@
 <template lang="pug"> 
   v-navigation-drawer(
-    v-model="drawer"
+    v-model="sidebar"
     app
     clipped
     left
@@ -23,19 +23,28 @@
           v-icon mdi-account-key
         v-list-item-content
           v-list-item-title Posts
+      
+      v-list-item(
+        to="/options"
+        nuxt
+      )
+        v-list-item-action
+          v-icon mdi-tune
+        v-list-item-content
+          v-list-item-title Options
 
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
+  computed: mapGetters(["sidebar"]),
+
   data: () => ({
     drawer: true,
   }),
 
-  methods: {
-    menuToggle() {
-      this.drawer = !this.drawer;
-    },
-  }
+  
 }
 </script>

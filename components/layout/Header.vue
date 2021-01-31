@@ -2,15 +2,13 @@
   v-app-bar(
     app
     clipped-left
-    color="dark"
-    dark
   )
     v-app-bar-nav-icon(
-      @click = "changeTheme"
-      )
+      @click="menuToggle"
+    )
     v-toolbar-title
       n-link(
-        class="white--text"
+        class="link--text"
         to="/"
       ) Test tasks
     v-spacer
@@ -24,13 +22,15 @@ export default {
   }),
 
   methods: {
+    menuToggle() {
+      this.$store.dispatch('updateSidebarStatus');
+    },
+
     changeTheme() {
-      this.$vuetify.theme.light = true
-      console.log('this.$vuetify.theme.light')
-      console.log(this.$vuetify.theme.dark)
+      this.$store.dispatch('updateTheme');
     }
   }
-}
+} 
 </script>
 
 <style lang="sass">

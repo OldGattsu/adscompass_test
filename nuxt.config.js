@@ -33,8 +33,23 @@ module.exports = {
   ** Helps to make production startup faster and also significantly decreasing node_modules size for production deployments
   */
   buildModules: [
-    ['@nuxtjs/vuetify', {}]
+    ['@nuxtjs/vuetify']
   ],
+
+  vuetify: {
+    treeShake: true,
+    theme: {       
+      dark: true,
+        themes: {
+          dark: {  
+            'link': '#ffffff',
+          },    
+          light: {  
+            'link': '#212121',
+          }
+        }
+      }
+  },
 
   css: [
     '~assets/style/main.sass'

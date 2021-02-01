@@ -31,20 +31,14 @@
         v-list-item-action
           v-icon mdi-tune
         v-list-item-content
-          v-list-item-title Options
+          v-list-item-title Settings
 
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
 
-export default {
-  computed: mapGetters(["sidebar"]),
-
-  data: () => ({
-    drawer: true,
-  }),
-
-  
-}
+  export default {
+    computed: mapGetters(["sidebar"]),  
+  }
 </script>

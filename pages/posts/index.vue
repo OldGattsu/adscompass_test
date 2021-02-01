@@ -19,7 +19,6 @@
 export default {
   async asyncData({ $axios }) {
     const items = await $axios.$get('https://jsonplaceholder.typicode.com/posts')
-    console.log(items)
     return { items }
   },
 

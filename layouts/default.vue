@@ -18,11 +18,6 @@ export default {
     Nav,
     Footer,
   },
-
-  data: () => ({
-    drawerLeft: true,
-  }),
-
 }
 </script>
 

@@ -17,18 +17,10 @@
 
 <script>
 export default {
-  data: () => ({
-    drawerLeft: true,
-  }),
-
   methods: {
     menuToggle() {
       this.$store.dispatch('updateSidebarStatus');
     },
-
-    changeTheme() {
-      this.$store.dispatch('updateTheme');
-    }
   }
 } 
 </script>

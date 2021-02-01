@@ -6,7 +6,7 @@
     v-card-text
       v-switch(
         v-model="whiteTheme"
-        :label="'Светлая тема'"
+        :label="'White theme'"
       )
     
 </template>
@@ -19,7 +19,7 @@ export default {
 
   watch: {
     whiteTheme: function() {
-        this.$vuetify.theme.dark = !this.$vuetify.theme.dark;  
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;  
     }
   },
 }
